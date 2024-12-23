@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TimeWarp - YouTube Highlights</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Generate Highlights from YouTube Video</h1>
+
+        <form method="POST" action="/">
+            <label for="url">Enter YouTube URL:</label>
+            <input type="text" id="url" name="url" placeholder="https://www.youtube.com/watch?v=VR6BCrcAlJg" required>
+            <button type="submit">Generate Highlights</button>
+        </form>
+
+        {% if highlights %}
+            <h2>Highlights:</h2>
+            <div class="highlights-container">
+                <ul id="highlight-list">
+                    {% for time, text in highlights.items() %}
+                        <li><strong>{{ time }}:</strong> {{ text }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <button id="copy-button" onclick="copyHighlights()">Copy Highlights</button>
+        {% endif %}
+    </div>
+
+    <script>
+        function copyHighlights() {
+            // Get the content of the highlights
+            var highlights = document.getElementById("highlight-list").innerText;
+
+            // Create a temporary textarea element to copy the content
+            var textarea = document.createElement("textarea");
+            textarea.value = highlights;
+            document.body.appendChild(textarea);
+
+            // Select and copy the text
+            textarea.select();
+            document.execCommand("copy");
+
+            // Remove the temporary textarea element
+            document.body.removeChild(textarea);
+
+            // Optionally, alert the user that the highlights were copied
+            alert("Highlights copied to clipboard!");
+        }
+    </script>
+</body>
+</html>
