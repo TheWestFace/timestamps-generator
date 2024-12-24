@@ -51,8 +51,8 @@ button:hover {
 
 /* Highlight section */
 .highlights-container {
-    max-height: 300px; /* Set a max height for the scrollable container */
-    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 300px;
+    overflow-y: auto; 
     margin-top: 20px;
 }
 
@@ -75,5 +75,5 @@ strong {
 }
 
 #copy-button {
-    margin-top: 10px; /* Optional: Adds some spacing from the previous element */
+    margin-top: 10px;
 }
