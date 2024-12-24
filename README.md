@@ -30,23 +30,23 @@ git clone https://github.com/TheWestFace/youtube-timestamp-generator.git
 
    ```bash
    cd youtube-timestamp-generator
-  ```
+   ```
 
-2. Set Up virtual environment (optional, but recommended)
+2. Set Up a virtual environment (optional, but recommended)
 
    ```bash
    python3 -m venv venv
    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-  ```
+   ```
 
 3. Install the required dependencies:
 
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-4. Run the app (ensure virtual environment is activate if used)
+4. Run the app (ensure the virtual environment is activated if used)
 
-```bash
-python app.py
-```
+   ```bash
+   python app.py
+   ```
