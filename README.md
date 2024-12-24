@@ -8,6 +8,8 @@ A web-based tool to generate highlights from YouTube videos by extracting key ti
 - **Copy Highlights:** Easily copy the generated highlights to your clipboard.
 - **Responsive Design:** The app is designed to work well on both desktop and mobile devices.
 
+![Image Alt](https://github.com/TheWestFace/timestamps-generator/blob/main/screenshot.png)
+
 ## Technologies Used
 
 - **Python (Flask):** The backend is built using Flask to handle the web server and API requests.
